@@ -20,12 +20,16 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      
+       
     - name: Build project
       run: npm run build  # Adjust to your build command
+
+    - name: Configure Git to use HTTPS
+      run: git config --global url."https://github.com/".insteadOf "git@github.com:"
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build  # Change this to your build output directory
+        force_orphan: true  # This helps if there's a conflict with the gh-pages branch
