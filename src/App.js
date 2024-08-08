@@ -2,6 +2,9 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const datafunction=()=>{
+    return null
+  }
   return (
     <div className="App">
       <header className="App-header">
@@ -16,7 +19,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Hello Vishal
-        </a>
+        </a
       </header>
     </div>
   );
