@@ -34,20 +34,6 @@ jobs:
           name: production-files
           path: ./build
 
-      - name: Report build status
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const status = 'success';
-            const context = 'build';
-            github.repos.createCommitStatus({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              sha: context.sha,
-              state: status,
-              context: context
-            });
-
   deploy:
     name: Deploy
     needs: build
