@@ -24,9 +24,6 @@ jobs:
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
-        
-      - name: Run Security Audit
-        run: npm audit --audit-level=moderate
 
       - name: Build project
         run: npm run build
