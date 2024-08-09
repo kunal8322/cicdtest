@@ -57,5 +57,5 @@ jobs:
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "$SERVER_HOST" >> ~/.ssh/known_hosts
-          rsync -avz --delete ./build/ $SERVER_USER@$SERVER_HOST:/CI_CD_Pipeline/
+          rsync -avz --delete ./build/ $SERVER_USER@$SERVER_HOST
 
