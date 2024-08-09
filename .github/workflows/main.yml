@@ -56,6 +56,6 @@ jobs:
           mkdir -p ~/.ssh
           echo ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINBaYnIlAYNPGJeJ0uFL4+us4/hW0mh5UOcch0+M2ybp kunalshejwal1@gmail.com > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H "$SERVER_HOST" >> ~/.ssh/known_hosts
+          ssh-keyscan -H "http://103.191.208.119/CI_CD_Pipeline/" >> ~/.ssh/known_hosts
           rsync -avz --delete ./build/ http://103.191.208.119/CI_CD_Pipeline/
 
