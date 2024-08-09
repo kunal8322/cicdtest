@@ -49,9 +49,9 @@ jobs:
 
       - name: Deploy to Server
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SERVER_USER: ${{ secrets.SERVER_USER }}
-          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+          SSH_PRIVATE_KEY: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINBaYnIlAYNPGJeJ0uFL4+us4/hW0mh5UOcch0+M2ybp kunalshejwal1@gmail.com
+          SERVER_USER: Administrator
+          SERVER_HOST: http://103.191.208.119/CI_CD_Pipeline/
         run: |
           mkdir -p ~/.ssh
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
