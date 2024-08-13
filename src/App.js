@@ -2,9 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const datafunction=()=>{
-    return null
-  }
+  // const datafunction=()=>{
+  //   return null
+  // }
+  // datafunction()
   return (
     <div className="App">
       <header className="App-header">
